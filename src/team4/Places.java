@@ -66,4 +66,10 @@ public class Places {
         
     }
     
+    public void display_places()
+    {
+    
+        System.out.println("\n Location Latitude : " + location_latitude + "\n Location Longitude : " + location_longitude + "\n Place Name : " + name );
+    }
+    
 }
