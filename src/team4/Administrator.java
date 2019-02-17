@@ -21,5 +21,28 @@ public class Administrator {
     
     }
     
+    public String getUserName(){
     
+        return UserName;
+    }
+    
+    public String getPassword(){
+    
+        return UserName;
+    }
+    
+    public void setUserName(String UName){
+    
+        String UserName=UName;
+    }
+    
+    public void setPassword(String Pass){
+    
+        String Password=Pass;
+    }
+    
+    public void display_Administrator(){
+    
+        System.out.println("\n User Name " +UserName+ "\n Password" +Password);
+    }
 }

@@ -13,4 +13,23 @@ public class User {
     
     int id;
     
+    public void User(int id1){
+    
+    this.id=id1;
+    }
+    
+    public int getid(){
+    
+        return id;
+    }
+    
+    public void setid(int id1){
+    
+        int id=id1;
+    }
+    
+    public void display_User(){
+    
+        System.out.println("\n Id " +id);
+    }
 }

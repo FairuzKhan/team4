@@ -68,7 +68,7 @@ public class Person {
     }
     
     
-    public void display_person(){
+    public void display_Person(){
     
     System.out.println("\n First Name " +FirstName+ "\n Last Name " + LastName + "\n Email id" +Email+ "\n Phone Number " +PhoneNumber);
     }
