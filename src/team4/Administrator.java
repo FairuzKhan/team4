@@ -11,38 +11,38 @@ package team4;
  */
 public class Administrator {
     
-    String UserName,Password;
+    String userName,password;
     
     
     public Administrator(String UName,String Pass){
     
-    this.UserName=UName;
-    this.Password=Pass;
+    this.userName=UName;
+    this.password=Pass;
     
     }
     
-    public String getUserName(){
+    public String getuserName(){
     
-        return UserName;
+        return userName;
     }
     
-    public String getPassword(){
+    public String getpassword(){
     
-        return UserName;
+        return password;
     }
     
-    public void setUserName(String UName){
+    public void setuserName(String UName){
     
-        String UserName=UName;
+        String userName=UName;
     }
     
     public void setPassword(String Pass){
     
-        String Password=Pass;
+        String password=Pass;
     }
     
     public void display_Administrator(){
     
-        System.out.println("\n User Name " +UserName+ "\n Password" +Password);
+        System.out.println("\n User Name " +userName+ "\n Password" +password);
     }
 }

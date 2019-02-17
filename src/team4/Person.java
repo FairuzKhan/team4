@@ -11,65 +11,65 @@ package team4;
  */
 public class Person {
     
-    String FirstName,LastName,Email;
-    int PhoneNumber;
+    String firstName,lastName,email;
+    int phoneNumber;
     
     public Person(String fName,String lName,String email1,int pNumber){
     
-        this.FirstName=fName;
-        this.LastName=lName;
-        this.Email=email1;
-        this.PhoneNumber=pNumber;
+        this.firstName=fName;
+        this.lastName=lName;
+        this.email=email1;
+        this.phoneNumber=pNumber;
     
     }
    
     
     public String getFirstName(){
         
-        return FirstName;
+        return firstName;
     }
     
     public String getLastName(){
     
     
-        return LastName;
+        return lastName;
     }
     
     public String getEmail(){
     
-    return Email;
+    return email;
     }
     
     public int getPhoneNumber(){
     
-    return PhoneNumber;
+    return phoneNumber;
     }
     
     
     
-    public void setFirstName(String fName){
+    public void setfirstName(String fName){
     
-    String FirstName=fName;
+    String firstName=fName;
     }
     
-    public void setLastName(String lName){
+    public void setlastName(String lName){
     
-    String LastName=lName;
+    String lastName=lName;
     }
     
-    public void setEmail(String email1){
+    public void setemail(String email1){
     
-    String Email=email1;
+    String email=email1;
     }
     
-    public void setPhoneNumber(int pNumber){
+    public void setphoneNumber(int pNumber){
     
-    int PhoneNumber=pNumber;
+    int phoneNumber=pNumber;
     }
     
     
     public void display_Person(){
     
-    System.out.println("\n First Name " +FirstName+ "\n Last Name " + LastName + "\n Email id" +Email+ "\n Phone Number " +PhoneNumber);
+    System.out.println("\n First Name " +firstName+ "\n Last Name " + lastName + "\n Email id" +email+ "\n Phone Number " +phoneNumber);
     }
 }
