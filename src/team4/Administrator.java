@@ -21,6 +21,5 @@ public class Administrator {
     
     }
     
-    public String getUserName()
     
 }
