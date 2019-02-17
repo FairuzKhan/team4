@@ -52,6 +52,6 @@ public void setdescription(String p_description)
 }
 public void display_categories()
 {
-    System.out.println("\n name : " + name + "\n  id " + id + " \n description " + description);
+    System.out.println("\n Name : " + name + "\n  Id : " + id + " \n Description : " + description);
 }
 }

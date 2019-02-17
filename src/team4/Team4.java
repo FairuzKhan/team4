@@ -38,7 +38,7 @@ public class Team4 {
         p.display_places();
          System.out.println();
         
-        category cat = new category("tourists","J123","Montréal is the largest city in Canada's Québec province. It’s set on an island in the Saint Lawrence River and named after Mt. \n Royal, the triple-peaked hill at its heart.\n Its boroughs, many of which were once independent cities, include neighbourhoods ranging from cobblestoned, French colonial Vieux-Montréal – with the Gothic Revival Notre-Dame Basilica at its centre – to bohemian Plateau.");
+        category cat = new category("Tourists","J123","Montréal is the largest city in Canada's Québec province. \n It’s set on an island in the Saint Lawrence River and named after Mt. \n Royal, the triple-peaked hill at its heart.\n Its boroughs, many of which were once independent cities, include neighbourhoods ranging from cobblestoned, French colonial Vieux-Montréal – with the Gothic Revival Notre-Dame Basilica at its centre – to bohemian Plateau.");
         cat.display_categories();
         System.out.println();
         
