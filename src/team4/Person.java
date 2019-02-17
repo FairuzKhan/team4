@@ -70,6 +70,6 @@ public class Person {
     
     public void display_Person(){
     
-    System.out.println("\n First Name " +firstName+ "\n Last Name " + lastName + "\n Email id" +email+ "\n Phone Number " +phoneNumber);
+    System.out.println("\n First Name : " +firstName+ "\n Last Name : " + lastName + "\n Email id : " +email+ "\n Phone Number : " +phoneNumber);
     }
 }

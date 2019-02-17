@@ -43,6 +43,6 @@ public class Administrator {
     
     public void display_Administrator(){
     
-        System.out.println("\n User Name " +userName+ "\n Password" +password);
+        System.out.println("\n User Name : " +userName+ "\n Password : " +password);
     }
 }

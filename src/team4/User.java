@@ -13,7 +13,7 @@ public class User {
     
     int id;
     
-    public void User(int id1){
+    public User(int id1){
     
     this.id=id1;
     }
@@ -30,6 +30,6 @@ public class User {
     
     public void display_User(){
     
-        System.out.println("\n Id " +id);
+        System.out.println("\n Id : " +id);
     }
 }
