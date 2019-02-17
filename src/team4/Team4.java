@@ -4,7 +4,7 @@
  * and open the template in the editor.
  */
 package team4;
-
+import java.util.*;
 /**
  *
  * @author 1895324
@@ -36,8 +36,16 @@ public class Team4 {
         
         Places p = new Places("45.5017° N","73.5673° W","Mont Royal");
         p.display_places();
+         System.out.println();
+        
+        category cat = new category("tourists","J123","Montréal is the largest city in Canada's Québec province. It’s set on an island in the Saint Lawrence River and named after Mt. \n Royal, the triple-peaked hill at its heart.\n Its boroughs, many of which were once independent cities, include neighbourhoods ranging from cobblestoned, French colonial Vieux-Montréal – with the Gothic Revival Notre-Dame Basilica at its centre – to bohemian Plateau.");
+        cat.display_categories();
         System.out.println();
         
+        Date d2 = new Date(2019-2-17);
+        details det = new details(d2);
+        det.displays_details();
+        System.out.println();
         
         
     }
