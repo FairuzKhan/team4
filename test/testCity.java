@@ -43,7 +43,7 @@ public class testCity {
         System.out.println("Test 1 for createId() method");
         
         String name = "Fairuz";
-        String expectedResult = "19-Mar-E-FZ";
+        String expectedResult = "19-Mar-O-FZ";
         String realResult = City.createID(new Date(), name);
         
         assertEquals(expectedResult, realResult);
