@@ -4,6 +4,7 @@
  * and open the template in the editor.
  */
 
+import java.util.Date;
 import org.junit.After;
 import org.junit.AfterClass;
 import org.junit.Before;
@@ -42,8 +43,9 @@ public class TestUser {
         System.out.println("Test 1 for CreateId method");
         
         String name = "Fairuz";
+        Date date = new Date();
         String expectedResult = "19-Mar-02-FZ";
-        String realResult = User.createId(name);
+        String realResult = User.createID(date, name);
         
         assertEquals(expectedResult, realResult);
     }
