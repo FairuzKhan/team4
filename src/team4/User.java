@@ -51,6 +51,10 @@ public class User {
         return id1;
         
     }
+
+    User(int i) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
     
     public String getfname(){
     
