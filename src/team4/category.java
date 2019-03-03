@@ -4,6 +4,7 @@
  * and open the template in the editor.
  */
 package team4;
+import java.text.SimpleDateFormat;
 import java .util.*;
 /**
  *
@@ -21,8 +22,53 @@ public class category
         this.name=p_name;
         this.id = p_id;
         this.description=p_description;
+        id = createID(name);
 
     }
+    
+    public static String createID(String name) {
+        SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MMM-dd");
+        Date newDate = new Date();
+        String date = sdf.format(newDate);
+        String[] dt = date.split("-");
+        String dtInt;
+        if (Integer.parseInt(dt[2]) % 2 == 0)
+            dtInt = "E";
+        else
+            dtInt = "O";
+        String mnt = dt[1];
+        String yr = dt[0].substring(2);
+        String fChar = "";
+        if (name.length() == 1)
+            fChar += "X";
+        if (name.length() == 2)
+            fChar += name;
+        else if (name.equals(""))
+            fChar = "XX";
+        else
+            fChar = name.substring(0, 1);
+        
+        String lChar = "";
+        if (name.length() == 1)
+            lChar += "X";
+        else if (name.length() == 2) 
+            lChar += name;
+        else if (name.equals(""))
+            lChar = "XX";
+        else
+            lChar = name.substring(name.length()-1);
+        String id = yr+"-"+mnt+"-"+dtInt+"-";
+        if (name.equals(""))
+            id += "XX";
+        else if (name.length() == 2)
+            id += name;
+        else
+            id += fChar.toUpperCase() + lChar.toUpperCase();
+        
+        return id;
+    }
+    
+    
     public String getName()
     {
         return name;
@@ -40,9 +86,9 @@ public void setName(String p_name)
     String name = p_name;
     
 }
-public void setid(String p_id)
+public void setid(String id)
 {
-    String id = p_id;
+    this.id = id;
     
 }
 public void setdescription(String p_description)
