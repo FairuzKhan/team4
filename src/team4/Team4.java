@@ -17,24 +17,24 @@ public class Team4 {
     public static void main(String[] args) {
         // TODO code application logic here
         
-        Person p1=new Person("james", "smith" ,"james95smith@gmail.com",01234567);
+        Person p1=new Person(new Date(), "james", "smith" ,"james95smith@gmail.com",01234567);
         p1.display_Person();
         System.out.println();
         
-        Administrator admin=new Administrator("David","D123");
+        Administrator admin=new Administrator(new Date(), "David","D123", new Date(), p1.firstName, p1.lastName, p1.email, p1.phoneNumber);
         admin.display_Administrator();
         System.out.println();
         
-        User u1=new User(101);
+        User u1=new User(new Date(), "101", new Date(), p1.firstName, p1.lastName, p1.email, p1.phoneNumber);
         u1.display_User();
         System.out.println();
         
         
-        City c = new City("Montreal","Canada","Tourist");
+        City c = new City(new Date(), "Montreal","Canada","Tourist");
         c.display_city();
         System.out.println();
         
-        Places p = new Places("45.5017° N","73.5673° W","Mont Royal");
+        Places p = new Places(new Date(), "45.5017° N","73.5673° W","Mont Royal");
         p.display_places();
          System.out.println();
         

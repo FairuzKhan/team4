@@ -6,69 +6,61 @@
 package team4;
 
 import java.text.SimpleDateFormat;
-import java.util.*;
+import java.util.Date;
+
 /**
  *
  * @author 1895321
  */
-public class User {
+public class User extends Person {
     
-    String id;
-    Date date;
-    static String fname,lname;
+    String id, newId;
     
-    public User(String id1,String fname,String lname,Date date){
-    this.fname = fname;
-    this.lname = lname;
-    this.date = date;
-    this.id=createId(lname);
+    public User(Date id, String id1, Date superId, String fName,String lName,String email1,int pNumber){
+        super(superId, fName, lName, email1, pNumber);
+        this.id=id1;
+        newId = createID(id, id1);
     }
     
-    public static String createId(String id)
-    {
-        int year = Calendar.getInstance().get(Calendar.YEAR) % 100;
-        Date date = new Date();
-        String strDateFormat = "MMM";
-        SimpleDateFormat sdf = new SimpleDateFormat(strDateFormat);
-        sdf = new SimpleDateFormat(strDateFormat);
-        String f = sdf.format(date);
-        Date d1 = new Date();
-        char first = fname.charAt(0);
-        char last = lname.charAt(0);
+    public static String createID(Date newDate, String name) {
+        SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MMM-dd");
+        String date = sdf.format(newDate);
+        String[] dt = date.split("-");
+        String dtInt;
+        if (Integer.parseInt(dt[2]) % 2 == 0)
+            dtInt = "E";
+        else
+            dtInt = "O";
+        String mnt = dt[1];
+        String yr = dt[0].substring(2);
+        String fChar = "";
+        if (name.length() == 1)
+            fChar += "X";
+        if (name.length() == 2)
+            fChar += name;
+        else if (name.equals(""))
+            fChar = "XX";
+        else
+            fChar = name.substring(0, 1);
         
-        if(first == ' ')
-        {
+        String lChar = "";
+        if (name.length() == 1)
+            lChar += "X";
+        else if (name.length() == 2) 
+            lChar += name;
+        else if (name.equals(""))
+            lChar = "XX";
+        else
+            lChar = name.substring(name.length()-1);
+        String id = yr+"-"+mnt+"-"+dtInt+"-";
+        if (name.equals(""))
+            id += "XX";
+        else if (name.length() == 2)
+            id += name;
+        else
+            id += fChar.toUpperCase() + lChar.toUpperCase();
         
-            first = 'X';
-        }
-        if(last == ' ')
-        {
-        
-            last = 'X';
-        }
-        
-        String id1 = year + "-" + d1 + first + last;
-        return id1;
-        
-    }
-
-    User(int i) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-    }
-    
-    public String getfname(){
-    
-        return fname;
-    }
-    
-    public String getlname(){
-    
-        return lname;
-    }
-    
-     public Date getdate(){
-    
-        return date;
+        return id;
     }
     
     public String getid(){
@@ -76,28 +68,15 @@ public class User {
         return id;
     }
     
-    public void setid(String id2){
-    
-        this.id=id2;
-    }
-    
-    public void setfname(String fname1){
-    
-        String fname = fname1;
-    }
-    
-    public void setlname(String lname1){
-    
-        String lname = lname1;
-    }
-    
-    public void setdate(String date1){
-    
-        String date = date1;
+    public void setid(String id){
+        this.id=id;
     }
     
     public void display_User(){
-    
-        System.out.println("\n Id : " +id + "Date : " + date + "First Name : " + fname + "Last Name : " + lname);
+        System.out.println();
+        System.out.println("User Details");
+        System.out.println("ID: " + newId + "\nPerson ID: " + super.newId + "\n User ID : " +id);
+        System.out.println("Person (User) Details: ");
+        super.display_Person();
     }
 }

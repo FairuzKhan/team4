@@ -7,7 +7,6 @@ package team4;
 
 import java.text.SimpleDateFormat;
 import java.util.*;
-import static team4.User.fname;
 /**
  *
  * @author 1895324
