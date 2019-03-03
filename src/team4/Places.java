@@ -5,6 +5,7 @@
  */
 package team4;
 
+import java.text.SimpleDateFormat;
 import java.util.*;
 
 /**
@@ -13,15 +14,55 @@ import java.util.*;
  */
 public class Places {
     
-    String location_latitude,location_longitude,name;
+    String location_latitude,location_longitude,name, newId;
     
-    public Places(String l_latitude,String l_longitude,String name1)
+    public Places(Date id, String l_latitude,String l_longitude,String name1)
     {
+        this.location_latitude = l_latitude;
+        this.location_longitude = l_longitude;
+        this.name = name1;    
+        newId = createID(id, name);
+    }
     
-       this.location_latitude = l_latitude;
-       this.location_longitude = l_longitude;
-       this.name = name1;
-    
+    public static String createID(Date date, String name) {
+        SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MMM-dd");
+        String dt1 = sdf.format(date);
+        String[] dt = dt1.split("-");
+        String dtInt;
+        if (Integer.parseInt(dt[2]) % 2 == 0)
+            dtInt = "E";
+        else
+            dtInt = "O";
+        String mnt = dt[1];
+        String yr = dt[0].substring(2);
+        String fChar = "";
+        if (name.length() == 1)
+            fChar += "X";
+        if (name.length() == 2)
+            fChar += name;
+        else if (name.equals(""))
+            fChar = "XX";
+        else
+            fChar = name.substring(0, 1);
+        
+        String lChar = "";
+        if (name.length() == 1)
+            lChar += "X";
+        else if (name.length() == 2) 
+            lChar += name;
+        else if (name.equals(""))
+            lChar = "XX";
+        else
+            lChar = name.substring(name.length()-1);
+        String id = yr+"-"+mnt+"-"+dtInt+"-";
+        if (name.equals(""))
+            id += "XX";
+        else if (name.length() == 2)
+            id += name;
+        else
+            id += fChar.toUpperCase() + lChar.toUpperCase();
+        
+        return id;
     }
     
     public String getlatitude()
